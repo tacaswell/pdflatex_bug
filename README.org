@@ -1,3 +1,5 @@
+* description
+
 These are test cases for a very strange interaction I found with
 texlive 2012, garphix, pdflatex, a png, and a pdf.  All files needed
 to reproduce the bug are included.
@@ -9,10 +11,21 @@ the pdf jpd is included after jfi_logo the generated pdf will not open
 (error 14) with a range of acrobat readers (version 9 linux, an
 (up-to-date?) pro version on mac, and newish version on a mac) if
 compiled with texlive 2012 from debian unstable.  If compiled with
-texlive 2009, from debian stable, the generated pdf works fine.
+texlive 2009, from debian stable, the generated pdf works fine.  In
+either case xpdf, okular, and preview will open the generated pdf.
 
 Using different pngs, different pdfs, making jpd go first, or using X>=1, then
 both versions of texlive generate a pdf that works with the acrobat 9 (linux).  
+
+* bug
+** Action
+run pdf latex on *.tex
+
+** Expected 
+get pdfs that will open with all pdf readers
+
+** actual 
+test_case_fail_1.tex generates a pdf that will not open with acrobat using texlive2012
 
 
 
