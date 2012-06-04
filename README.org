@@ -1,4 +1,5 @@
 * description
+pdflatex generates an invalid pdf if a particular combination of images are inluded
 
 These are test cases for a very strange interaction I found with
 texlive 2012, garphix, pdflatex, a png, and a pdf.  All files needed
@@ -28,4 +29,36 @@ get pdfs that will open with all pdf readers
 test_case_fail_1.tex generates a pdf that will not open with acrobat using texlive2012
 
 
+
+* versions
+** texlive 2012
+tcaswell@kaylee:~/pdflatex_bug$ pdflatex --version
+pdfTeX 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian)
+kpathsea version 6.1.0
+Copyright 2012 Peter Breitenlohner (eTeX)/Han The Thanh (pdfTeX).
+There is NO warranty.  Redistribution of this software is
+covered by the terms of both the pdfTeX copyright and
+the Lesser GNU General Public License.
+For more information about these matters, see the file
+named COPYING and the pdfTeX source.
+Primary author of pdfTeX: Peter Breitenlohner (eTeX)/Han The Thanh (pdfTeX).
+Compiled with libpng 1.2.49; using libpng 1.2.49
+Compiled with zlib 1.2.7; using zlib 1.2.7
+Compiled with poppler version 0.18.4
+
+
+** texlive 2009
+tcaswell@innoue:pdflatex_bug$ pdflatex --version
+pdfTeX 3.1415926-1.40.10-2.2 (TeX Live 2009/Debian)
+kpathsea version 5.0.0
+Copyright 2009 Peter Breitenlohner (eTeX)/Han The Thanh (pdfTeX).
+There is NO warranty.  Redistribution of this software is
+covered by the terms of both the pdfTeX copyright and
+the Lesser GNU General Public License.
+For more information about these matters, see the file
+named COPYING and the pdfTeX source.
+Primary author of pdfTeX: Peter Breitenlohner (eTeX)/Han The Thanh (pdfTeX).
+Compiled with libpng 1.2.44; using libpng 1.2.44
+Compiled with zlib 1.2.3.4; using zlib 1.2.3.4
+Compiled with poppler version 0.12.4
 
