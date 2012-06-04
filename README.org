@@ -1,0 +1,18 @@
+These are test cases for a very strange interaction I found with
+texlive 2012, garphix, pdflatex, a png, and a pdf.  All files needed
+to reproduce the bug are included.
+
+
+If the png jfi_logo is included, and re-sized using
+[width=X\linewidth] as an argument of \includegraphics where X < 1 and
+the pdf jpd is included after jfi_logo the generated pdf will not open
+(error 14) with a range of acrobat readers (version 9 linux, an
+(up-to-date?) pro version on mac, and newish version on a mac) if
+compiled with texlive 2012 from debian unstable.  If compiled with
+texlive 2009, from debian stable, the generated pdf works fine.
+
+Using different pngs, different pdfs, making jpd go first, or using X>=1, then
+both versions of texlive generate a pdf that works with the acrobat 9 (linux).  
+
+
+
